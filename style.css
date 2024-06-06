@@ -1,0 +1,261 @@
+.encabezado{
+    background-color: rgba(28,61,108,255);
+    display: flex;
+    border-bottom: solid rgba(27,59,104,255) 5px;
+}
+
+.univ-nombre{
+    color: rgba(253,254,254,255);
+    text-align: center;
+    align-self: center;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+}
+
+.logo{
+    height: 100px;
+}
+
+.barranav1{
+    display: flex;
+    background-color: rgba(28,61,108,255);
+}
+
+.botonbarra1{
+    color: rgba(253,254,254,255);
+    border: none;
+    background-color: rgba(28,61,108,255) ;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+}
+
+.botonbarra1:hover{
+    background-color: rgba(197,145,31,255) !important;
+    box-shadow: 0 1px 5px rgba(197,145,31,255);
+    transition: all 0.2s ease;
+}
+
+.barranav2{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.botonbarra2, .botonbarra3{
+    margin-top: 30px;
+    width: 300px;
+    border: solid 1px rgba(28,61,108,255) ;
+    border-radius: 3px;
+    background-color: white ;
+    font-size: 20px;
+    padding-left: 20px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.botonbarra2:hover{
+    box-shadow: 0 1px 5px rgba(197,145,31,255);
+    transition: all 0.2s ease;
+
+}
+
+.botonbarra3:hover{
+    box-shadow: 0 1px 5px rgba(197,145,31,255);
+    transition: all 0.2s ease;
+
+}
+.barranav3{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+
+.menuAlumnos, .menuGrupos{
+    margin-left: 350px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    align-self: center;
+    
+}
+
+.boxinput{
+    width: 300px;
+    height: 25px;
+    font-size: 20px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    border: 2px solid rgba(28,61,108,255);
+    border-radius: 5px;
+}
+
+.boxinput:hover{
+    box-shadow: 0 1px 5px  rgba(28,61,108,255);
+    transition: all 0.2s ease;
+}
+
+.botonform{
+    width: 350px;
+    border: solid 1px rgba(28,61,108,255) ;
+    border-radius: 3px;
+    background-color: rgba(28,61,108,255) ;
+    font-size: 20px;
+    color: rgba(253,254,254,255);
+    padding-left: 20px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.botonform:hover{
+    box-shadow: 0 1px 5px rgba(28,61,108,255);
+    transition: all 0.2s ease;
+}
+
+.tituloAlta{
+    width: 350px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
+.accionesAlumno{
+    margin-left: 300px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: 180px;
+    grid-template-areas:
+    "info grupo inscribir"
+    "info calificar promedio";
+    justify-content: center;
+}
+
+
+.infoAlumno{
+    grid-area: info;
+    border: 2px solid #ccc;
+    justify-self: center;
+    width: 350px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+
+}
+
+.asignar{
+    grid-area: grupo;
+    border: 2px solid #ccc;
+    justify-self: center;
+}
+.inscribir{
+    grid-area: inscribir;
+    border: 2px solid #ccc;
+    justify-self: center;
+
+}
+.calificarMateria{
+    grid-area: calificar;
+    border: 2px solid #ccc;
+    justify-self: center;
+
+}
+.proAlumno{
+    grid-area: promedio;
+    border: 2px solid #ccc;
+    justify-self: center;
+}
+
+.textboxal{
+    width: 300px;
+    height: 20px;
+    font-size: 15px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    border: 2px solid rgba(28,61,108,255);
+    border-radius: 5px;
+}
+
+.formulario2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    
+}
+
+.botonform2{
+    width: 200px;
+    border: solid 1px rgba(28,61,108,255) ;
+    border-radius: 3px;
+    background-color: rgba(28,61,108,255) ;
+    font-size: 20px;
+    color: rgba(253,254,254,255);
+    padding-left: 20px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+.botonform2:hover{
+    box-shadow: 0 1px 5px rgba(28,61,108,255);
+    transition: all 0.2s ease;
+}
+
+.formularioAlumno{
+    justify-content: center;
+}
+
+.listadoAlumnos{
+    margin-top: 50px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+main{
+    height: 920px;
+}
+
+.info{
+    background-color: rgba(28,61,108,255);
+    color: rgba(253,254,254,255);
+    font-family: "Quicksand", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    height: 30px;
+    padding-top: 10px;
+}
+
+.grupoAlumno, .listaAlumno{
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+.promedio{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    text-align: center;
+}
+
+.promedioGpo{
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    margin-left: 150px;
+}

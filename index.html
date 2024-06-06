@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Alumnos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="encabezado">
+        <img src="logo.png" alt="logo-universidad" class="logo">
+        <h1 class="univ-nombre">Universidad Nacional Dev.F</h1>
+    </header>
+
+    <main>
+    <nav class="barranav1">
+        <div>
+            <button id="btnAlumnos" class="botonbarra1">
+            Administrar alumnos
+            </button>
+        </div>
+        <div>
+            <button id="btnGrupos" class="botonbarra1">
+                Administrar Grupos
+                </button>
+        </div>
+    </nav>
+
+    <nav class="barranav2">
+        <div>
+            <button id="btnAlta" class="botonbarra2" style="display: none;">
+                Alta de alumno
+            </button>
+        </div>
+
+        <div>
+            <button id="btnConsultaal" class="botonbarra2" style="display: none;">
+                Consulta y gestion de alumno
+            </button>
+        </div>
+        <div>
+            <button id="btnlistadoAl" class="botonbarra2" style="display: none;">
+                Listado de alumnos
+            </button>
+        </div>
+    </nav>
+
+    <nav class="barranav3">
+        <div>
+            <button id="btnCreargrupo" class="botonbarra3" style="display: none;">
+                Crear grupo
+            </button>
+        </div>
+        <div>
+            <button id="btnPromgpo" class="botonbarra3" style="display: none;">
+                Promedio de grupo
+            </button>
+        </div>
+    </nav>
+
+    <section class="menuAlumnos">
+
+
+        <div id="altaAl" style="display: none;">
+            <form id="altaAlumno" class="formulario">
+            <p class="tituloAlta">Ingrese el Nombre, Apellido y Edad del alumno a dar de alta</p>
+            <label for="nombre"></label>
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre del alumno" class="boxinput"><br><br>
+            <label for="apellido"></label>
+            <input type="text" id="apellido" name="apellido" placeholder="Apellido del alumno" class="boxinput"><br><br>
+            <label for="edad"></label>
+            <input type="number" id="edad" name="edad" placeholder="Edad del alumno" class="boxinput" ><br><br>
+            <button type="button" onclick="crearAlumno()" class="botonform">Dar de alta</button>
+            </form>
+        </div>
+
+        <div id="consultaAlumno" style="display: none;" class="formularioAlumno">
+            <form id="ConsultarAlumno" class="formulario">
+            <p class="tituloAlta">Ingrese el nombre, apellido o ambos del alumno a gestionar</p>
+            <label for="nombre6"></label>
+            <input type="text" id="nombre6" name="nombre6" class="boxinput" placeholder="Busqueda por nombre"><br><br>
+            <label for="apellido6"></label>
+            <input type="text" id="apellido6" name="apellido6" class="boxinput" placeholder="Busqueda por apellido"><br><br>
+            <button type="button" id="administrar" onclick="consultaAlumno()"  class="botonform">Aceptar</button>
+            </form>
+        </div>
+
+        <div id="listaAlumnos" style="display: none;">
+            <p class="tituloAlta">Listado de alumnos inscritos</p>
+            <button type="button" onclick="mostrarAlumnos()" class="botonform">Mostrar listado de alumnos</button>               
+            <p id="listadoAlumnos" class="listadoAlumnos">
+            </p>
+        </div>
+    </section>
+
+
+
+    <section class="accionesAlumno" id="accionesAlumno" style="display: none;">
+        <div id="infoAlumno" class="infoAlumno" style="display: none;">
+            <p class="tituloAlta"></p>
+            <p id="grupoAlumno" class="grupoAlumno">
+            </p>
+            <p id="listaAlumno" class="listaAlumno">
+            </p>
+        </div>
+        <div id="asignarGrupo" style="display: none;" class="asignar">
+            <form id="asignar alumno a grupo" class="formulario2">
+            <p class="tituloAlta">Asignacion a grupo</p>
+            <label for="nomgpo2"></label>
+            <input type="text" id="nomgpo2" name="nomgpo2" placeholder="Nombre del grupo a asignar" class="textboxal"><br><br>
+            <button type="button" onclick="asignarGrupo()" class="botonform2">Asignar grupo</button>
+            </form>
+            </div>
+
+        <div id="altaMateria" style="display: none;" class="inscribir">
+        <form id="inscribir materia" class="formulario2">
+        <p class="tituloAlta">Inscribir materia</p>
+        <label for="materia"></label>
+        <input type="text" id="materia" name="materia" placeholder="Materia a inscribir" class="textboxal"><br><br>
+        <button type="button" onclick="inscribirMateria()" class="botonform2">Inscribir materia</button>
+        </form>
+        </div>
+
+        <div id="calificar" style="display: none;" class="calificarMateria">
+        <form id="asignar calificacion" class="formulario2">
+        <p class="tituloAlta">Asignar calificacion</p>
+        <label for="materia2"></label>
+        <input type="text" id="materia2" name="materia2" placeholder="Materia" class="textboxal"><br><br>
+        <label for="calificacion"></label>
+        <input type="number" id="calificacion" name="calificacion" placeholder="Calificacion" class="textboxal"><br><br>
+        <button type="button" onclick="calificar()" class="botonform2">Asignar calificacion</button>
+        </form>
+        </div>
+
+        <div id="promedioAlumno" style="display: none;" class="proAlumno">
+        <form id="promedio de alumno" class="formulario2">
+        <p class="tituloAlta">Promedio de alumno</p>
+        </form>
+        <p id="promedio" class="promedio">
+        </p>
+        </div>
+    </section>
+
+    <section class="menuGrupos">
+        <div id="crearGrupo" style="display: none;">
+        <form id="crear grupo" class="formulario">
+        <p class="tituloAlta">Crear grupo</p>
+        <label for="nomgpo"></label>
+        <input type="text" id="nomgpo" name="nomgpo" placeholder="Nombre del grupo" class="boxinput"><br><br>
+        <button type="button" onclick="crearGpo()" class="botonform">Crear grupo</button>
+        </form>
+        </div>
+
+        <div id="promedioGrupo" style="display: none;">
+            <form id="calcularPromGpo" class="formulario">
+            <p class="tituloAlta">Calcular promedio de grupo</p>
+            <label for="nomgpo3"></label>
+            <input type="text" id="nomgpo3" name="nomgpo3" placeholder="Nombre del grupo" class="boxinput"><br><br>
+            <button type="button" onclick="calcPromgpo()" class="botonform">Calcular promedio</button>
+            </form>
+            <p id="promedioGpo" class="promedioGpo">
+            </p>
+            </div>
+
+        </section>
+    
+</main>
+<footer>
+    <p class="info">Powered by Francisco Aguilar</p>
+</footer>
+    <script src="main.js"></script>
+</body>
+</html>
